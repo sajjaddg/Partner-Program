@@ -1,96 +1,56 @@
-import React from 'react'
 import Popup from 'reactjs-popup'
-import NavLink from '../nav-link/nav-link.component';
-const NavLinks = () => {
-    const data = [
-        {
-            name: 'Partnerships',
-            link: '/Partnerships',
-            subMenu: true,
-            sublinks: [
-                {
-                    name: 'Solution Program',
-                    link: '/Partnerships/SolutionProgram',
-
-                },
-                {
-                    name: 'Affiliate Program',
-                    link: '/Partnerships/AffiliateProgram'
-                }
-            ]
-        },
-        {
-            name: 'Products',
-            link: '/Products',
-            subMenu: true,
-            sublinks: [
-                {
-                    name: 'LiveChat',
-                    link: '/Products/LiveChat',
-                    icon: 'orange'
-
-                },
-                {
-                    name: 'ChatBot',
-                    link: '/Products/ChatBot',
-                    icon: 'blue'
-                    
-                }
-            ]
-        },
-        {
-            name: 'Blog',
-            link: '/Blog',
-            subMenu: false,
-
-        },
-        {
-            name: 'Help Center',
-            link: '/HelpCenter',
-            subMenu: false,
-
-        },
-    ]
+import { MenuContext } from '../../contexts/menu/menu.context'
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom';
+import { Menu } from 'antd';
+const NavLinks = ({ className }) => {
+    const { items } = useContext(MenuContext)
     const svgDir = require.context('../../assets/logo/');
     return (
-        <div>
-            <ul className='flex flex-row transform transition-all  mod2:space-x-16 mod1:space-x-8 mod2:pl-20 mod1:pl-8 '>
-                {
-                    data.map((item) => {
-                        return (
-                            item.subMenu ? (
-                                
-                                <Popup trigger={<li key={item} className='font-semibold'>{item.name}</li>}
-                                    on="hover"
-                                    
-                                >
-                                    <div className='flex flex-col ml-32 drop-shadow-md bg-white w-72 h-44 rounded-lg justify-center p-6 space-y-4'>
-                                        {
-                                            item.sublinks?.map((item) => {
-                                                return (
-                                                    <div className='flex rounded-lg space-x-3 hover:bg-[#dfdfe2cc] p-4 justify-start flex-row items-center'>
-                                                        {
-                                                            item.icon &&
-                                                            <div className=' flex items-center'>
-                                                                <img src={svgDir(`./${item.icon}.svg`)} className='' />
-                                                            </div>
-                                                        }
-                                                        <p key={item} className='font-semibold text-sm'>{item.name}</p>
-                                                    </div>
-                                                )
-                                            })
-                                        }
-                                    </div>
+        items &&
+        <div className={className}>
+            {
+                items.map((item) => {
+                    return (
+                        item.subMenu ? (
 
-                                </Popup>
-                            )
-                                :
-                                <NavLink key={item} name={item.name} link={item.link}/>
+                            <Popup trigger={
+                                <div key={item} className='flex items-center space-x-1'>
+                                    <h1 className='font-medium text-lg'>{item.name}</h1>
+                                    <ion-icon name="chevron-down-outline" style={{ fontSize: 20, marginBottom: 6 }}></ion-icon>
+                                </div>
+                            }
+                                on="hover"
+
+                            >
+                                <div className='flex flex-col ml-32 drop-shadow-md bg-white w-72 h-44 rounded-lg justify-center p-6 space-y-4'>
+                                    {
+                                        item.sublinks?.map((item) => {
+                                            return (
+                                                <div className='flex rounded-lg items-center  space-x-3 hover:bg-[#dfdfe2cc] p-4 justify-start '>
+                                                    {
+                                                        item.icon &&
+                                                        <img src={svgDir(`./${item.icon}.svg`)} className='' />
+                                                    }
+                                                    <div className='text-sm font-semibold'>
+                                                        {item.name}
+                                                    </div>
+                                                </div>
+                                            )
+                                        })
+                                    }
+                                </div>
+
+                            </Popup>
                         )
-                    })
-                }
-            </ul>
+                            :
+                            <div className='font-medium text-lg break-normal '>{item.name}</div>
+
+                    )
+                })
+            }
         </div>
+
     )
 }
 
