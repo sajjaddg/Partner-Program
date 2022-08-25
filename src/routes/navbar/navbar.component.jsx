@@ -32,7 +32,7 @@ const Navbar = () => {
                 </div>
             </div >
             {open &&
-                <div className='flex flex-col lg:hidden h-[90vh] justify-between  ' >
+                <div className='flex fixed left-0 bottom-0 right-0 top-12 z-50  bg-white flex-col lg:hidden h-[93vh] justify-between  ' >
                     <MobileMenu />
                     <div className='flex flex-col px-5 py-3 space-y-4 '>
                         <div className="flex">
