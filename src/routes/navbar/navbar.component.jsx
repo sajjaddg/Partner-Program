@@ -9,7 +9,7 @@ const Navbar = () => {
     const { open } = useContext(MenuContext)
     return (
         <>
-            <div className="flex justify-between items-center px-5 py-3 shadow-sm lg:p-6 lg:justify-start lg:space-x-12">
+            <div className="flex bg-white sticky top-0 z-50 justify-between items-center px-5 py-3 shadow-sm lg:p-6 lg:justify-start lg:space-x-12">
                 <Logo className='shrink-0 w-40 h-6 md:w-52 md:h-8 lg:w-56 lg:h-10' />
                 <div className="flex items-center space-x-2 lg:hidden">
                     <label className='font-medium text-sm'>{open ? 'Close' : 'Menu'}</label>
@@ -25,7 +25,7 @@ const Navbar = () => {
                         </div>
                     </button>
                     <button >
-                        <div className='flex items-center justify-center w-24 h-9 transition-color duration-300 text-white rounded-sm bg-[#ee0007] hover:text-white hover:bg-[#bd0309]    '>
+                        <div className='flex items-center justify-center w-24 h-9 transition-color duration-300 text-white rounded-sm bg-[#ee0007]  hover:bg-[#bd0309]    '>
                             <label className='font-semibold '>Join now</label>
                         </div>
                     </button>
