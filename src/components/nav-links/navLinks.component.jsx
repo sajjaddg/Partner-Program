@@ -1,8 +1,7 @@
 import Popup from 'reactjs-popup'
 import { MenuContext } from '../../contexts/menu/menu.context'
 import React, { useContext } from 'react'
-import { Link } from 'react-router-dom';
-import { Menu } from 'antd';
+
 const NavLinks = ({ className }) => {
     const { items } = useContext(MenuContext)
     const svgDir = require.context('../../assets/logo/');

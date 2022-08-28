@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Menu } from 'antd';
 import { MenuContext } from '../../contexts/menu/menu.context';
-import 'antd/dist/antd.css';
+import 'antd/dist/antd.min.css'
 import './nav-menu-mobile.styles.css'
 const MobileMenu = () => {
     const { items } = useContext(MenuContext)
