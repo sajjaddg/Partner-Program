@@ -1,11 +1,10 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import { ReactComponent as Logo } from '../../assets/logo/logo.svg'
 import NavLinks from '../../components/nav-links/navLinks.component'
 import MenuButton from '../../components/nav-menu-mobile.button/menu-mobile.component'
 import { MenuContext } from '../../contexts/menu/menu.context'
 import MobileMenu from '../../components/nav-menu-mobile/nav-menu-mobile.component'
-import { Outlet } from 'react-router-dom'
-const Navbar = () => {
+const BasicHeader = () => {
     const { open } = useContext(MenuContext)
     return (
         <>
@@ -49,9 +48,9 @@ const Navbar = () => {
                     </div>
                 </div>
             }
-            <Outlet />
         </>
+
     )
 }
 
-export default Navbar;
+export default BasicHeader
