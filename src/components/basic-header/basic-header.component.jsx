@@ -44,7 +44,7 @@ const BasicHeader = () => {
                                 </button>
                             </div>
                             <div className="flex justify-center items-center">
-                                <a className='font-light text-black hover:text-black'>Already a Partner? <span className='text-blue-500'>Log in</span> </a>
+                                <button className='font-light text-black hover:text-black'>Already a Partner? <span className='text-blue-500'>Log in</span> </button>
                             </div>
                         </div>
                     </div>
