@@ -201,10 +201,10 @@ const Home = () => {
                         </p>
                     </div>
                     <div className='flex flex-col space-y-10 py-20'>
-                        <div className='flex flex-col md:pl-6 md:flex-row md:space-y-0 shadow-xl space-y-3 overflow-hidden rounded-lg bg-white' >
-                            <div className='flex flex-col md:space-y-8 space-y-6 justify-start p-10 bg-white' style={{ flexBasis: '41.66666667%' }}>
+                        <div className='flex flex-col  md:pl-6 md:flex-row md:space-y-0 shadow-xl space-y-3 overflow-hidden rounded-lg bg-white' >
+                            <div className='flex flex-col lg:pt-32 md:space-y-8 space-y-6 justify-start p-10 bg-white' style={{ flexBasis: '41.66666667%' }}>
                                 <OrengeLogo className='h-10 w-44' />
-                                <div className='flex flex-col space-y-6 md:space-y-2'>
+                                <div className='flex flex-col space-y-6 md:space-y-2 '>
                                     <p className='font-light text-lg md:text-xl'>A complete customer service platform for connecting with customers and boosting sales.</p>
                                     <button className='transition-color duration-300 hover:bg-[#000000d2] px-6 py-2 md:px-5 md:py-3 bg-black rounded-sm w-3/4 font-bold text-white'>
                                         Discover LiveChat
@@ -218,7 +218,7 @@ const Home = () => {
 
                         </div>
                         <div className='flex flex-col md:pl-6 md:flex-row md:space-y-0 shadow-xl space-y-3 overflow-hidden rounded-lg bg-white'>
-                            <div className='flex flex-col md:space-y-8 space-y-6 justify-start p-10 bg-white' style={{ flexBasis: '41.66666667%' }}>
+                            <div className='flex flex-col lg:pt-32 md:space-y-8 space-y-6 justify-start p-10 bg-white' style={{ flexBasis: '41.66666667%' }}>
                                 <BlueLogo className='h-10 w-44' />
                                 <div className='flex flex-col space-y-6 md:space-y-2'>
                                     <p className='font-light text-lg md:text-xl'>An all-in-one platform for building and launching chatbots without coding.</p>
@@ -264,11 +264,11 @@ const Home = () => {
             <section className='bg-white'>
                 <div className='container flex flex-col  md:space-x-32 items-center px-5 md:max-h-[34rem]  space-y-6 relative md:justify-start  py-10 md:flex-row  '>
                     <div className='flex flex-col md:pt-24 items-start md:space-y-10 '  >
-                        <h2 className='font-extrabold text-3xl md:text-4xl'>
+                        <h2 className='font-extrabold text-3xl md:text-4xl lg:text-6xl'>
                             Together,<br />
                             we’re <span className='px-1 rounded-md bg-[#FFD000]'>stronger</span>
                         </h2>
-                        <p className='font-light text-lg md:text-xl '>
+                        <p className='font-light text-lg md:text-xl lg:text-2xl '>
                             You don’t have to look for a new direction for your business on your own. Join forces with us, and let growth opportunities find you.
                         </p>
                     </div>
