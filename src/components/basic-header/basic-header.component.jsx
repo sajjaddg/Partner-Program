@@ -13,7 +13,7 @@ const BasicHeader = () => {
                     <Logo className='shrink-0 w-40 h-6 md:w-52 md:h-8 lg:w-56 lg:h-10' />
                     <div className="flex items-center space-x-2 lg:hidden">
                         <label className='font-medium text-sm'>{open ? 'Close' : 'Menu'}</label>
-                        <MenuButton />
+                        <MenuButton MenuContext={MenuContext} />
                     </div >
                     <div className="lg:flex hidden">
                         <NavLinks className='grid grid-flow-col gap-x-12 xl:gap-x-16 ' />
