@@ -22,9 +22,9 @@ const AppHome = () => {
                     <span className='font-normal text-lg'>Get to know Partner Program</span>
                     <ion-icon name="chevron-forward-outline" style={{ fontSize: '18px' }}></ion-icon>
                 </div>
-                <div className='px-4 flex flex-col space-y-4'>
+                <div className='px-4 flex flex-col md:grid md:grid-cols-2 md:gap-5 flex-nowrap md:space-y-0 md:flex-row space-y-4'>
 
-                    <div className='flex flex-col py-2 px-3 space-y-4 bg-white border'>
+                    <div className='flex flex-col py-2 px-3  md:w-full  md:justify-between  space-y-4 bg-white border'>
                         <div className='flex justify-between items-center'>
                             <span className='font-medium text-base'>Balance</span>
                             <ion-icon name="arrow-forward-outline" style={{ fontSize: '18px' }}></ion-icon>
@@ -41,7 +41,7 @@ const AppHome = () => {
                         </div>
                     </div>
 
-                    <div className='flex flex-col py-2 px-3 space-y-4 bg-white border'>
+                    <div className='flex flex-col py-2 px-3 md:w-full md:justify-between  space-y-4 bg-white border'>
                         <div className='flex justify-between items-center'>
                             <span className='font-medium text-base'>Affiliate Program</span>
                             <ion-icon name="arrow-forward-outline" style={{ fontSize: '18px' }}></ion-icon>
@@ -59,7 +59,7 @@ const AppHome = () => {
                         </div>
                     </div>
 
-                    <div className='flex flex-col py-2 px-3 space-y-4 bg-white border'>
+                    <div className='flex flex-col py-2 px-3 md:w-full  md:justify-between  space-y-4 bg-white border'>
                         <div className='flex justify-between items-center'>
                             <span className='font-medium text-base'>Solution Program</span>
                             <ion-icon name="arrow-forward-outline" style={{ fontSize: '18px' }}></ion-icon>
@@ -79,8 +79,8 @@ const AppHome = () => {
             </section>
             <section className='px-4 flex flex-col '>
                 <span className='text-base font-medium'>Performance over time</span>
-                <div className='flex flex-col space-y-6 py-4'>
-                    <div className='flex flex-col space-y-4 py-6 px-3 items-center justify-center border bg-white'>
+                <div className='flex flex-col space-y-6 py-4 md:flex-row md:items-start md:space-y-0 md:space-x-4  md:justify-between '>
+                    <div className='flex md:basis-1/2  flex-col space-y-4 py-6 px-3 items-center justify-center border bg-white'>
                         <Chart />
                         <span className='text-2xl px-6 font-medium text-center'>
                             You don't have any affiliate licenses yet
@@ -92,15 +92,16 @@ const AppHome = () => {
                             <button className='py-2 px-4 bg-[white] text-blue-600 text-sm border hover:bg-[#f7f5f5] border-blue-500 transition-color duration-300 rounded-sm'>Get link</button>
                         </div>
                     </div>
-                    <div className='flex flex-col space-y-4 py-6 px-3 items-center justify-center border bg-white'>
-                        <SolutionChart />
-                        <span className='text-2xl px-6 font-medium text-center'>
-                            Solution Program
+                    <div className='flex flex-col md:basis-1/2  space-y-4 py-6 px-3 items-center justify-center border bg-white'>
+                            <SolutionChart />
+                            <span className='text-2xl px-6 font-medium text-center'>
+                                Solution Program
 
-                        </span>
-                        <span className='text-lg text-[#767680]  font-normal text-center'>
-                            Create and customize product accounts for your customers. Manage payments and monitor performance of your licenses.
-                        </span>
+                            </span>
+                            <span className='text-lg text-[#767680]  font-normal text-center'>
+                                Create and customize product accounts for your customers. Manage payments and monitor performance of your licenses.
+                            </span>
+
                         <div>
                             <button className='py-2 px-4 bg-[#0C66FF] text-white text-sm border hover:bg-[#0a5eee]  transition-color duration-300 rounded-sm'>Explore</button>
                         </div>
@@ -110,12 +111,12 @@ const AppHome = () => {
             <section className='px-4 space-y-4 flex flex-col '>
                 <span className='text-base font-medium'>Enrich our partnership</span>
                 <div className='flex'>
-                    <div className="flex flex-col px-4  bg-[#F6F6F7]">
+                    <div className="flex flex-col px-4 md:w-full  bg-[#F6F6F7]">
                         <div className='flex p-3 items-center space-x-4 py-6 '>
                             <div>
                                 <Summary />
                             </div>
-                            <span>
+                            <span className='md:w-44'>
                                 Discover <span className='text-blue-500 hover:underline cursor-pointer'>our Programsand</span> gain new functionalities within the app.
                             </span>
                         </div>
@@ -123,7 +124,7 @@ const AppHome = () => {
                             <div>
                                 <Directory />
                             </div>
-                            <span>
+                            <span className='md:w-44'>
                                 Check our <span className='text-blue-500 hover:underline cursor-pointer'>educational materials </span>and make the most of our Partner Program.{' '}<span className='text-red-500'>NEW!</span>
                             </span>
                         </div>
@@ -131,7 +132,7 @@ const AppHome = () => {
                             <div>
                                 <Benefits />
                             </div>
-                            <span >
+                            <span className='md:w-44 '>
                                 Claim your <span className='text-blue-500 hover:underline cursor-pointer'>programs’ benefits </span>and discover new business opportunities.
                             </span>
                         </div>
