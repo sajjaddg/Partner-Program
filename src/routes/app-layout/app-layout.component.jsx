@@ -2,6 +2,7 @@ import { useContext } from 'react'
 import { Outlet } from 'react-router-dom'
 import { ReactComponent as Logo } from '../../assets/logo/logodarck.svg'
 import AppMenuMobile from '../../components/app-manu-mobile/app-menu-mobile.component'
+import AppNav from '../../components/app-nav/app-nav.component'
 import MenuButton from '../../components/nav-menu-mobile.button/menu-mobile.component'
 import { MenuAppContext } from '../../contexts/app-menu/app-menu.context'
 const AppLayout = () => {
@@ -28,8 +29,8 @@ const AppLayout = () => {
                         </div>
                     }
                 </div>
-                <div className='hidden lg:flex flex-col w-16 min-h-screen bg-[#131317] px-8'>
-
+                <div className='hidden lg:flex h-screen sticky top-0 bg-[#131317] '>
+                    <AppNav/>
                 </div>
                 <div style={{maxWidth:'1216px',margin:'0 auto'}}>
                     <Outlet />
