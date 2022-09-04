@@ -4,25 +4,25 @@ import { ReactComponent as SolutionChart } from '../../assets/appHome/solution-c
 import { ReactComponent as Summary } from '../../assets/appHome/summary.svg'
 import { ReactComponent as Directory } from '../../assets/appHome/directory.svg'
 import { ReactComponent as Benefits } from '../../assets/appHome/benefits.svg'
-
+import './app-home.styles.css'
 
 
 
 
 const AppHome = () => {
     return (
-        <div className='flex flex-col min-h-screen min-w-full space-y-8  bg-[#FCFCFC]'>
+        <div className='flex container1 flex-col space-y-8 lg:p-6 '>
             <section className='flex items-center border-b'>
                 <div className='flex items-center justify-start p-4'>
                     <span className='font-medium text-2xl'>Home</span>
                 </div>
             </section>
             <section className='flex flex-col space-y-3  '>
-                <div className='flex items-center cursor-pointer justify-between px-4 py-2 bg-white border rounded-sm'>
+                <div className='flex items-center cursor-pointer justify-between px-4 py-2 bg-white border rounded-sm lg:hidden'>
                     <span className='font-normal text-lg'>Get to know Partner Program</span>
                     <ion-icon name="chevron-forward-outline" style={{ fontSize: '18px' }}></ion-icon>
                 </div>
-                <div className='px-4 flex flex-col md:grid md:grid-cols-2 md:gap-5 flex-nowrap md:space-y-0 md:flex-row space-y-4'>
+                <div className='px-4 flex flex-col md:grid lg:grid-cols-3 md:grid-cols-2 md:gap-5 flex-nowrap md:space-y-0 md:flex-row space-y-4'>
 
                     <div className='flex flex-col py-2 px-3  md:w-full  md:justify-between  space-y-4 bg-white border'>
                         <div className='flex justify-between items-center'>
@@ -93,14 +93,14 @@ const AppHome = () => {
                         </div>
                     </div>
                     <div className='flex flex-col md:basis-1/2  space-y-4 py-6 px-3 items-center justify-center border bg-white'>
-                            <SolutionChart />
-                            <span className='text-2xl px-6 font-medium text-center'>
-                                Solution Program
+                        <SolutionChart />
+                        <span className='text-2xl px-6 font-medium text-center'>
+                            Solution Program
 
-                            </span>
-                            <span className='text-lg text-[#767680]  font-normal text-center'>
-                                Create and customize product accounts for your customers. Manage payments and monitor performance of your licenses.
-                            </span>
+                        </span>
+                        <span className='text-lg text-[#767680]  font-normal text-center'>
+                            Create and customize product accounts for your customers. Manage payments and monitor performance of your licenses.
+                        </span>
 
                         <div>
                             <button className='py-2 px-4 bg-[#0C66FF] text-white text-sm border hover:bg-[#0a5eee]  transition-color duration-300 rounded-sm'>Explore</button>
@@ -111,28 +111,30 @@ const AppHome = () => {
             <section className='px-4 space-y-4 flex flex-col '>
                 <span className='text-base font-medium'>Enrich our partnership</span>
                 <div className='flex'>
-                    <div className="flex flex-col px-4 md:w-full  bg-[#F6F6F7]">
-                        <div className='flex p-3 items-center space-x-4 py-6 '>
-                            <div>
+                    <div className="flex flex-col lg:flex-row px-4 md:w-full lg:bg-transparent  bg-[#F6F6F7]">
+                        <div className='flex p-3 items-center space-x-4 py-6 lg:px-0  '>
+                            <div className='lg:flex lg:items-center '>
                                 <Summary />
                             </div>
-                            <span className='md:w-44'>
+                            <span className='md:w-44 lg:w-auto'>
                                 Discover <span className='text-blue-500 hover:underline cursor-pointer'>our Programsand</span> gain new functionalities within the app.
                             </span>
                         </div>
-                        <div className='flex p-3 items-center space-x-4 py-6 border-t'>
-                            <div>
+                        <div className='flex p-3 items-center space-x-4 py-6 border-t lg:border-t-0'>
+                            <div className='lg:flex lg:items-center lg:bg-white'>
+
                                 <Directory />
                             </div>
-                            <span className='md:w-44'>
+                            <span className='md:w-44 lg:w-auto'>
                                 Check our <span className='text-blue-500 hover:underline cursor-pointer'>educational materials </span>and make the most of our Partner Program.{' '}<span className='text-red-500'>NEW!</span>
                             </span>
                         </div>
-                        <div className='flex p-3 items-center space-x-4 py-6 border-t'>
-                            <div>
+                        <div className='flex p-3 items-center space-x-4 py-6 border-t lg:border-t-0'>
+                            <div className='lg:flex lg:items-center '>
+
                                 <Benefits />
                             </div>
-                            <span className='md:w-44 '>
+                            <span className='md:w-44 lg:w-auto '>
                                 Claim your <span className='text-blue-500 hover:underline cursor-pointer'>programs’ benefits </span>and discover new business opportunities.
                             </span>
                         </div>

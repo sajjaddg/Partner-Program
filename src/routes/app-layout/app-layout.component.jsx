@@ -28,10 +28,10 @@ const AppLayout = () => {
                         </div>
                     }
                 </div>
-                <div className='hidden lg:flex flex-col w-16 min-h-screen bg-[#131317] px-10'>
+                <div className='hidden lg:flex flex-col w-16 min-h-screen bg-[#131317] px-8'>
 
                 </div>
-                <div>
+                <div style={{maxWidth:'1216px',margin:'0 auto'}}>
                     <Outlet />
 
                 </div>
